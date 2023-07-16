@@ -13,8 +13,6 @@ public:
         if(start==events.size() || k==0) return 0;
         if(dp[start][k]!=-1) return dp[start][k];
         vector<int> find;
-        // for(auto x:events) find.push_back(x[0]);
-        // int index=upper_bound(find.begin(),find.end(),events[start][1])-find.begin();
         int index=upperbound(events,events[start][1]);
         int ans=events[start][2]+f(index,events,dp,k-1);
         ans=max(ans,f(start+1,events,dp,k));
