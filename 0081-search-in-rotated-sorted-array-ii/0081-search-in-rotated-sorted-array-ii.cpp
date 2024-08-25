@@ -1,5 +1,9 @@
 class Solution {
 public:
+    /*
+        Time: O(n) when all numbers are same
+        Space: O(1)
+    */
     bool search(vector<int>& nums, int target) {
         int low = 0, high = nums.size() - 1;
 
